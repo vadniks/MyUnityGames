@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
         //rb.MovePosition(rb.position + Vector2.up * moveY * SPEED * Time.deltaTime);
 
         float moveX = Input.GetAxis("Horizontal");
+        moveX = Input.acceleration.x;
         rb.MovePosition(rb.position + Vector2.right * moveX * SPEED * Time.deltaTime);
 
         if (isPlatformNearly)
